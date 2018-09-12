@@ -1,0 +1,7 @@
+{
+  "name": "househarbour",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

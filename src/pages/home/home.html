@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" color="primary" style="zoom:1.5;"></ion-icon>
+    </button>
+    <ion-title><img src="assets/best.png"></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card *ngFor="let listing of listings">
+
+        <img src='https://househarbour.herokuapp.com/images/{{listing.pic}}'/>
+
+        <ion-card-content>
+          <ion-card-title>
+              {{ listing.nameH }}
+          </ion-card-title>
+          <p>
+              {{ listing.address}}
+          </p>
+        </ion-card-content>
+
+        <ion-row no-padding>
+          <ion-col>
+            <button ion-button clear small color="dark" icon-start>
+              <ion-icon name="contacts"></ion-icon>
+                 {{ listing.capacity}}
+            </button>
+          </ion-col>
+          <ion-col text-center>
+            <button ion-button clear small color="primary" icon-start>
+              <ion-icon name="pricetag"></ion-icon>
+                {{ listing.price }}
+            </button>
+          </ion-col>
+          <ion-col text-right>
+            <button ion-button clear small color="dark" icon-start>
+              <ion-icon name="bus"></ion-icon>
+               {{ listing.locality }}
+            </button>
+          </ion-col>
+        </ion-row>
+
+      </ion-card>
+</ion-content>
